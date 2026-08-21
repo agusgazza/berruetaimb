@@ -1,0 +1,321 @@
+// Pestañas disponibilidad precios temporales
+function openRate(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("rates__content");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("rates__button");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" --open", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " --open";
+}
+
+$(document).ready(function () {
+
+  // Toggle comodidades extra
+  $(".js-comodidades-toggle").click(function () {
+    var $btn = $(this);
+    var $inner = $btn.closest(".filters-bar__item__inner");
+    var isOpen = $inner.hasClass("--comodidades-open");
+
+    $inner.toggleClass("--comodidades-open");
+    $btn.toggleClass("--open");
+    $btn.find(".js-comodidades-toggle-label").text(isOpen ? "Más opciones" : "Menos opciones");
+  });
+
+
+  // Abrir Menu mobile
+  $(".hamburger").click(function () {
+    $(this).toggleClass("open");
+    $(".menu-navigation").toggleClass("--open");
+    $(".menu-navigation__overlay").toggleClass("--active");
+  });
+
+  // Cerrar Menu mobile
+  $(".menu-navigation__close").click(function () {
+    $(".hamburger").toggleClass("open");
+    $(".menu-navigation").toggleClass("--open");
+    $(".menu-navigation__overlay").toggleClass("--active");
+  });
+
+  // Sucursales desplegables footer
+  $(".offices__item:not(.offices-single) .offices__item__text").click(function () {
+    const $currentItem = $(this).closest('.offices__item');
+    const $desc = $currentItem.find('.offices__item__description');
+    const $icon = $(this).find('.offices__item-icon');
+
+    // Colapsar todas las demás sucursales
+    $currentItem
+      .siblings('.offices__item')
+      .removeClass('--open')
+      .find('.offices__item__description')
+      .removeClass('--open');
+
+    $currentItem
+      .siblings('.offices__item')
+      .find('.offices__item-icon')
+      .removeClass('--open');
+
+    // Toggle la actual
+    $icon.toggleClass('--open');
+    $desc.toggleClass('--open');
+  });
+
+  // Filtros: ordenar por
+  $(".js-orderby").click(function () {
+    $(".js-orderby-list").toggleClass("--open");
+    $(".js-sharedlist-list").removeClass("--open");
+  });
+
+  // Compartir redes sociales listado de propiedades
+  $(".js-sharedlist").click(function () {
+    $(".js-sharedlist-list").toggleClass("--open");
+    $(".js-orderby-list").removeClass("--open");
+  });
+
+  // Abrir y cerrar filtros de busqueda
+  $(".js-btnfilters").click(function () {
+    $(".js-filters").toggleClass("--open");
+  });
+
+  $(".js-filters-close").click(function () {
+    $(".js-filters").removeClass("--open");
+  });
+
+  // Abrir y cerrar modal de contacto
+  $(".js-contact-ficha").click(function () {
+    if ($(".js-menu-footer-whatsapp.--open").length) {
+
+      $(".js-menu-footer-whatsapp.--open").removeClass('--open');
+
+    }
+    if ($(".js-menu-footer-phone.--open").length) {
+
+      $(".js-menu-footer-phone.--open").removeClass('--open');
+
+    }
+    $(".js-modal-contact").toggleClass("--open");
+  });
+
+  $(".js-contact-ficha-close").click(function () {
+    $(".js-modal-contact").removeClass("--open");
+  });
+
+  $(".js-button-phone").click(function () {
+    if ($(".js-menu-footer-whatsapp.--open").length) {
+
+      $(".js-menu-footer-whatsapp.--open").removeClass('--open');
+
+    }
+    $(".js-menu-footer-phone").toggleClass("--open");
+  });
+
+  $(".js-button-whatsapp").click(function () {
+    if ($(".js-menu-footer-phone.--open").length) {
+
+      $(".js-menu-footer-phone.--open").removeClass('--open');
+
+    }
+    $(".js-menu-footer-whatsapp").toggleClass("--open");
+  });
+
+
+  // Desplegar Codigo
+  $(".search-code__button").click(function () {
+    $(".search-code__modal").toggleClass("--open");
+  });
+
+  $(".search-code__modal__tooltip").click(function () {
+    $(".search-code__modal").toggleClass("--open");
+  });
+
+
+  // Desplegar filtros
+  $(".filters-bar__title").click(function () {
+    $(this).find("+ .filters-bar__item__inner").toggleClass("--open");
+    $(this).find("img").toggleClass("--open");
+  });
+
+  // Ver mas datos de inmobiliaria
+
+  $(".inmob-info__button").click(function () {
+    $(".inmob-info__moreinfo").toggleClass("--open");
+  });
+
+  $(window).scroll(function () {
+    if ($(document).scrollTop() > 170 && $(document).scrollTop() < 1100) {
+      $(".message-property").addClass("--show");
+    } else {
+      $(".message-property").removeClass("--show");
+    }
+  });
+
+  // Scroll header fijo
+  $(window).scroll(function () {
+    var header = $("header");
+    var headerPosition = $("header").offset().top;
+    if (headerPosition > 100) {
+      header.addClass("scrollFix");
+    } else {
+      header.removeClass("scrollFix");
+    }
+  });
+
+  // Slider Fotos Ficha
+  var swiperuno = new Swiper(".ficha__slider", {
+    direction: "horizontal",
+    slidesPerView: 1,
+    spaceBetween: 15,
+
+    pagination: {
+      el: ".ficha__slider__pagination",
+      type: "bullets",
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next.ficha__slider__button.--right",
+      prevEl: ".swiper-button-prev.ficha__slider__button.--left",
+    },
+  });
+
+  // Slider Home
+  var swipercuatro = new Swiper(".hero__slider", {
+    direction: "horizontal",
+    slidesPerView: 1,
+    loop: true,
+    speed: 700,
+
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
+
+  // Slider Thumbnail (cuadricula)
+  var swipercinco = new Swiper(".hero__slider-thumbnail", {
+    slidesPerView: 3,
+    slidesPerColumn: 2,
+    speed: 700,
+
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
+
+  // Slider Propiedades relacionadas
+  var swiperdos = new Swiper(".ficha__related", {
+    direction: "horizontal",
+    spaceBetween: 0,
+
+    navigation: {
+      nextEl: ".swiper-button-next.ficha__related__button.--right",
+      prevEl: ".swiper-button-prev.ficha__related__button.--left",
+    },
+
+    breakpoints: {
+      480: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+
+      1024: {
+        slidesPerView: 4,
+      },
+    },
+  });
+
+  // Slider Datepicker
+  var swipertres = new Swiper(".datepicker-carousel", {
+    direction: "horizontal",
+    slidesPerView: 2,
+    spaceBetween: 0,
+
+    navigation: {
+      nextEl: ".swiper-button-next.datepicker-carousel__button.--right",
+      prevEl: ".swiper-button-prev.datepicker-carousel__button.--left",
+    },
+
+    breakpoints: {
+      360: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+    },
+  });
+
+  // Ancla home
+  $('a[href^="#"]').click(function () {
+    var destino = $(this.hash);
+    if (destino.length == 0) {
+      destino = $('a[name="' + this.hash.substr(1) + '"]');
+    }
+    if (destino.length == 0) {
+      destino = $("html");
+    }
+    $("html, body").animate({ scrollTop: destino.offset().top }, 500);
+    return false;
+  });
+
+  // Validar campos - focus
+  $(document).on("focus", ".validarCampo", function () {
+    $(this).removeClass("input--error");
+  });
+
+  // Validar campos - blur
+  $(document).on("blur", ".validarCampo", function () {
+    var campo = $(this).attr("id");
+    var valor = $(this).val();
+    if (valor != "") {
+      $("#" + campo + "_error").addClass("--hidden");
+    }
+  });
+});
+
+
+/* BOTON SCROLL TO TOP */
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    if (scrollBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+          scrollTopBtn.classList.add('scroll-top--visible');
+        } else {
+          scrollTopBtn.classList.remove('scroll-top--visible');
+        }
+      });
+      scrollBtn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
+  });
+
+
+  
+const inputsForm = document.querySelectorAll('.form-item input, .form-item textarea');
+
+
+inputsForm.forEach(input => {
+    input.addEventListener('input', (e) => {
+        const inputElement = e.target;
+        const formItem = inputElement.closest('.form-item');
+        
+        if (formItem) {
+            inputElement.classList.remove("input--error")
+            const errorText = formItem.querySelector('.form-item__messages');
+            if (errorText) {
+                errorText.classList.add('--hidden');
+            }
+        }
+    });
+});
