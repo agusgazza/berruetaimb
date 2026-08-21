@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propiedades — Berrueta Inmobiliaria | Venta y Alquiler en CABA y la Costa</title>
+  <meta name="description" content="Explorá todas nuestras propiedades en venta y alquiler: departamentos, casas, lotes y locales en Parque Chacabuco, Flores, Caballito, Mar de Ajó y más.">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="header">
+    <div class="header__inner container">
+      <a class="brand" href="index.html" aria-label="Berrueta Inmobiliaria — inicio">
+        <img class="brand__emblem" src="assets/img/emblema.png" alt="" width="46" height="46">
+        <span class="brand__name">BERRUETA<span class="brand__tag">Inmobiliaria</span></span>
+      </a>
+
+      <nav class="nav" id="menu-principal" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Inicio</a></li>
+          <li><a class="nav__link" href="propiedades.html" aria-current="page">Propiedades</a></li>
+          <li><a class="nav__link" href="tasaciones.html">Tasaciones</a></li>
+          <li><a class="nav__link" href="nosotros.html">Nosotros</a></li>
+          <li><a class="nav__link" href="contacto.html">Contacto</a></li>
+        </ul>
+        <div class="nav__meta">
+          <a href="tel:01149211274">(011) 4921-1274 — Parque Chacabuco</a>
+          <a href="tel:2257420401">(02257) 42-0401 — Mar de Ajó</a>
+          <a href="mailto:info@berruetainmob.com.ar">info@berruetainmob.com.ar</a>
+        </div>
+      </nav>
+
+      <a class="header__phone" href="tel:01149211274">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        (011) 4921-1274
+      </a>
+
+      <button class="header__toggle" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <section class="page-hero" aria-labelledby="titulo-pagina">
+      <img class="page-hero__bg" src="assets/img/photos/banner.jpg" alt="">
+      <div class="container">
+        <p class="eyebrow">Catálogo completo</p>
+        <h1 class="page-hero__title" id="titulo-pagina">Propiedades</h1>
+        <p class="page-hero__lead">Departamentos, casas, lotes y locales en la Ciudad de Buenos Aires y la Costa Atlántica. Más de 190 oportunidades activas.</p>
+      </div>
+    </section>
+
+    <section class="section section--ivory" aria-label="Listado de propiedades">
+      <div class="container">
+
+        <div class="filters" role="group" aria-label="Filtrar propiedades">
+          <button class="filters__chip is-active" type="button" data-filter="todas">Todas</button>
+          <button class="filters__chip" type="button" data-filter="venta">Venta</button>
+          <button class="filters__chip" type="button" data-filter="alquiler">Alquiler</button>
+          <button class="filters__chip" type="button" data-filter="oportunidad">Oportunidades</button>
+          <button class="filters__chip" type="button" data-filter="credito">Apto crédito</button>
+        </div>
+
+        <div class="cards">
+
+          <article class="card reveal" data-operation="venta" data-tags="oportunidad">
+            <div class="card__media">
+              <img src="assets/img/photos/prop-01.jpg" alt="Lote sobre Av. José María Moreno" loading="lazy" width="900" height="620">
+              <div class="card__badges"><span class="badge badge--gold">Oportunidad</span></div>
+              <span class="card__operation">Venta · Lote</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title"><a href="https://www.berruetainmob.com.ar/propiedades">Lote para desarrolladores sobre Av. José María Moreno</a></h3>
+              <p class="card__location">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+                José María Moreno 1462, Parque Chacabuco
+              </p>
+              <ul class="card__features"><li>Apto desarrollo</li><li>Sobre avenida</li></ul>
+              <footer class="card__footer">
+                <p class="card__price"><span>USD</span> 330.000</p>
+                <span class="card__cta">Ver más</span>
+              </footer>
+            </div>
+          </article>
+
+          <article class="card reveal" data-operation="venta" data-tags="credito">
+            <div class="card__media">
+              <img src="assets/img/photos/prop-02.jpg" alt="Departamento en Palermo" loading="lazy" width="900" height="620">
+              <div class="card__badges"><span class="badge">Apto crédito</span></div>
+              <span class="card__operation">Venta · Departamento</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title"><a href="https://www.berruetainmob.com.ar/propiedades">4 ambientes en Palermo con balcón y cochera</a></h3>
+              <p class="card__location">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+                Zapata al 100, Palermo
+              </p>
+              <ul class="card__features"><li>4 ambientes</li><li>3 dormitorios</li><li>2 baños</li><li>Cochera</li></ul>
+              <footer class="card__footer">
+                <p class="card__price"><span>USD</span> 220.000</p>
+                <span class="card__cta">Ver más</span>
+              </footer>
+            </div>
+          </article>
+
+          <article class="card reveal" data-operation="venta" data-tags="oportunidad">
+            <div class="card__media">
+              <img src="assets/img/photos/prop-03.jpg" alt="Lote con locales en Av. Rivadavia" loading="lazy" width="900" height="620">
+              <div class="card__badges"><span class="badge badge--gold">Oportunidad</span><span class="badge badge--down">Bajó 16%</span></div>
+              <span class="card__operation">Venta · Lote</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title"><a href="https://www.berruetainmob.com.ar/propiedades">Lote con locales comerciales sobre Av. Rivadavia</a></h3>
+              <p class="card__location">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+                Av. Rivadavia 4086, Almagro
+              </p>
+              <ul class="card__features"><li>Acepta permuta</li><li>Anticipo y cuotas</li></ul>
+              <footer class="card__footer">
+                <p class="card__price"><span>USD</span> 1.180.000</p>
+                <span class="card__cta">Ver más</span>
+              </footer>
+            </div>
+          </article>
+
+          <article class="card reveal" data-operation="venta" data-tags="oportunidad">
+            <div class="card__media">
+              <img src="assets/img/photos/prop-04.jpg" alt="Departamento a estrenar en Flores" loading="lazy" width="900" height="620">
+              <div class="card__badges"><span class="badge badge--gold">Oportunidad</span></div>
+              <span class="card__operation">Venta · Departamento</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title"><a href="https://www.berruetainmob.com.ar/propiedades">2 ambientes a estrenar en Flores con balcón y parrilla</a></h3>
+              <p class="card__location">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+                Portela al 400, Flores
+              </p>
+              <ul class="card__features"><li>2 ambientes</li><li>1 dormitorio</li><li>Parrilla</li></ul>
+              <footer class="card__footer">
+                <p class="card__price"><span>USD</span> 105.000</p>
+                <span class="card__cta">Ver más</span>
+              </footer>
+            </div>
+          </article>
+
+          <article class="card reveal" data-operation="alquiler">
+            <div class="card__media">
+              <img src="assets/img/photos/prop-05.jpg" alt="Departamento en alquiler en Flores" loading="lazy" width="900" height="620">
+              <div class="card__badges"><span class="badge badge--down">Bajó 6%</span></div>
+              <span class="card__operation">Alquiler · Departamento</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title"><a href="https://www.berruetainmob.com.ar/propiedades">3 ambientes en alquiler con amplio balcón al frente</a></h3>
+              <p class="card__location">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+                Fray Cayetano Rodríguez al 300, Flores
+              </p>
+              <ul class="card__features"><li>3 ambientes</li><li>2 dormitorios</li><li>1 baño</li></ul>
+              <footer class="card__footer">
+                <p class="card__price"><span>$</span> 950.000</p>
+                <span class="card__cta">Ver más</span>
+              </footer>
+            </div>
+          </article>
+
+          <article class="card reveal" data-operation="venta" data-tags="oportunidad">
+            <div class="card__media">
+              <img src="assets/img/photos/prop-06.jpg" alt="Semipiso en Caballito" loading="lazy" width="900" height="620">
+              <div class="card__badges"><span class="badge badge--down">Bajó 5%</span></div>
+              <span class="card__operation">Venta · Departamento</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title"><a href="https://www.berruetainmob.com.ar/propiedades">Semipiso de 3 ambientes en el corazón de Caballito</a></h3>
+              <p class="card__location">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+                San José de Calasanz 100, Caballito
+              </p>
+              <ul class="card__features"><li>3 ambientes</li><li>2 dormitorios</li><li>1 baño</li></ul>
+              <footer class="card__footer">
+                <p class="card__price"><span>USD</span> 123.798</p>
+                <span class="card__cta">Ver más</span>
+              </footer>
+            </div>
+          </article>
+
+          <article class="card reveal" data-operation="venta" data-tags="credito oportunidad">
+            <div class="card__media">
+              <img src="assets/img/photos/prop-07.jpg" alt="Departamento en Flores con baulera" loading="lazy" width="900" height="620">
+              <div class="card__badges"><span class="badge">Apto crédito</span><span class="badge badge--down">Bajó 4%</span></div>
+              <span class="card__operation">Venta · Departamento</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title"><a href="https://www.berruetainmob.com.ar/propiedades">3 ambientes con balcón al frente y baulera</a></h3>
+              <p class="card__location">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+                Av. Directorio al 2500, Flores
+              </p>
+              <ul class="card__features"><li>3 ambientes</li><li>2 dormitorios</li><li>1 baño</li></ul>
+              <footer class="card__footer">
+                <p class="card__price"><span>USD</span> 109.000</p>
+                <span class="card__cta">Ver más</span>
+              </footer>
+            </div>
+          </article>
+
+          <article class="card reveal" data-operation="venta">
+            <div class="card__media">
+              <img src="assets/img/photos/prop-08.jpg" alt="Departamento tipo casa en Mar de Ajó" loading="lazy" width="900" height="620">
+              <div class="card__badges"><span class="badge badge--down">Bajó 14%</span></div>
+              <span class="card__operation">Venta · Tipo casa</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title"><a href="https://www.berruetainmob.com.ar/propiedades">Departamento tipo casa a metros del mar</a></h3>
+              <p class="card__location">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+                Melón Gil al 300, Mar de Ajó
+              </p>
+              <ul class="card__features"><li>3 ambientes</li><li>Excepcional ubicación</li></ul>
+              <footer class="card__footer">
+                <p class="card__price"><span>USD</span> 59.500</p>
+                <span class="card__cta">Ver más</span>
+              </footer>
+            </div>
+          </article>
+
+          <article class="card reveal" data-operation="venta" data-tags="oportunidad">
+            <div class="card__media">
+              <img src="assets/img/photos/prop-09.jpg" alt="Semipisos a estrenar en Flores" loading="lazy" width="900" height="620">
+              <div class="card__badges"><span class="badge badge--gold">A estrenar</span></div>
+              <span class="card__operation">Venta · Semipiso</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title"><a href="https://www.berruetainmob.com.ar/propiedades">Semipisos de 4 ambientes a estrenar con pileta</a></h3>
+              <p class="card__location">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+                Av. San Pedrito 363, Flores
+              </p>
+              <ul class="card__features"><li>4 ambientes</li><li>3 dormitorios</li><li>Cochera</li><li>Pileta</li></ul>
+              <footer class="card__footer">
+                <p class="card__price"><span>USD</span> 237.000</p>
+                <span class="card__cta">Ver más</span>
+              </footer>
+            </div>
+          </article>
+
+          <article class="card reveal" data-operation="venta" data-tags="credito oportunidad">
+            <div class="card__media">
+              <img src="assets/img/photos/prop-10.jpg" alt="Departamento en Floresta" loading="lazy" width="900" height="620">
+              <div class="card__badges"><span class="badge">Apto crédito</span><span class="badge badge--gold">Oportunidad</span></div>
+              <span class="card__operation">Venta · Departamento</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title"><a href="https://www.berruetainmob.com.ar/propiedades">4 ambientes en Floresta con cocina separada y lavadero</a></h3>
+              <p class="card__location">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+                Carrasco al 800, Floresta
+              </p>
+              <ul class="card__features"><li>4 ambientes</li><li>3 dormitorios</li><li>2 baños</li></ul>
+              <footer class="card__footer">
+                <p class="card__price"><span>USD</span> 98.000</p>
+                <span class="card__cta">Ver más</span>
+              </footer>
+            </div>
+          </article>
+
+          <article class="card reveal" data-operation="alquiler">
+            <div class="card__media">
+              <img src="assets/img/photos/prop-11.jpg" alt="Departamento con patio en Caballito" loading="lazy" width="900" height="620">
+              <span class="card__operation">Alquiler · Departamento</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title"><a href="https://www.berruetainmob.com.ar/propiedades">4 ambientes en Caballito con patio propio</a></h3>
+              <p class="card__location">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+                Senillosa al 100, Caballito
+              </p>
+              <ul class="card__features"><li>4 ambientes</li><li>3 dormitorios</li><li>2 baños</li><li>Patio</li></ul>
+              <footer class="card__footer">
+                <p class="card__price"><span>$</span> 1.300.000</p>
+                <span class="card__cta">Ver más</span>
+              </footer>
+            </div>
+          </article>
+
+          <article class="card reveal" data-operation="venta">
+            <div class="card__media">
+              <img src="assets/img/photos/prop-12.jpg" alt="Departamento en Parque Chacabuco" loading="lazy" width="900" height="620">
+              <span class="card__operation">Venta · Departamento</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title"><a href="https://www.berruetainmob.com.ar/propiedades">2 ambientes lateral sobre Avenida Vernet</a></h3>
+              <p class="card__location">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+                Avenida Vernet 333, Parque Chacabuco
+              </p>
+              <ul class="card__features"><li>2 ambientes</li><li>1 dormitorio</li><li>1 baño</li></ul>
+              <footer class="card__footer">
+                <p class="card__price"><span>USD</span> 55.000</p>
+                <span class="card__cta">Ver más</span>
+              </footer>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="section__more reveal">
+          <a class="button button--line-dark" href="https://www.berruetainmob.com.ar/propiedades" target="_blank" rel="noopener">Ver el catálogo completo en línea</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-titulo">
+      <img class="cta-band__bg" src="assets/img/photos/hero.jpg" alt="" loading="lazy">
+      <div class="container">
+        <p class="eyebrow">¿No encontraste lo que buscás?</p>
+        <h2 class="cta-band__title" id="cta-titulo">Contanos qué necesitás y <em>lo buscamos por vos</em></h2>
+        <div class="cta-band__actions">
+          <a class="button button--gold" href="contacto.html">Contactanos</a>
+          <a class="button button--line" href="https://wa.me/5491139006545" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <img class="brand__emblem" src="assets/img/emblema.png" alt="" width="46" height="46">
+          <span class="brand__name">BERRUETA<span class="brand__tag">Inmobiliaria</span></span>
+        </a>
+        <p>Más de 40 años acompañando a las familias a encontrar su lugar, en la ciudad y en la costa.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/berrueta.inmobiliaria" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/people/Berrueta-Inmobiliaria/100089555132149/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+        </div>
+      </div>
+      <nav class="footer__col" aria-label="Navegación del pie de página">
+        <h3>Secciones</h3>
+        <ul>
+          <li><a href="propiedades.html">Propiedades</a></li>
+          <li><a href="tasaciones.html">Tasaciones</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="footer__col">
+        <h3>Sucursales</h3>
+        <ul>
+          <li>Av. J. M. Moreno 1402, CABA</li>
+          <li>J. Newbery 73, Mar de Ajó</li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3>Contacto</h3>
+        <ul>
+          <li><a href="tel:01149211274">(011) 4921-1274</a></li>
+          <li><a href="tel:2257420401">(02257) 42-0401</a></li>
+          <li><a href="mailto:info@berruetainmob.com.ar">info@berruetainmob.com.ar</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <div class="container">
+        <p>© 2026 Berrueta Inmobiliaria — Todos los derechos reservados. Corredores matriculados CUCICBA y CMCPDJD.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/5491139006545" target="_blank" rel="noopener" aria-label="Chateá con nosotros por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.2-.5s0-.4 0-.5c-.1-.1-.5-1.3-.7-1.8-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.4-.3z"/></svg>
+  </a>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
